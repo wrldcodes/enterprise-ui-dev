@@ -5,13 +5,13 @@
   "main": "./src/main.ts",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "node init && vite",
     "test:svelte": "vitest --config=vitest.config.svelte.ts",
     "test:all": "vitest",
     "test:accessibility": "vitest accessibility --run",
     "coverage": "vitest --coverage --run",
     "test": "echo \"Navigate into an example and run the tests from there!\" && exit 1",
-    "build": "tsc && vite build",
+    "build": "node init && tsc && vite build",
     "preview": "vite preview"
   },
   "keywords": [
@@ -32,6 +32,8 @@
     "@emotion/css": "^11.10.6",
     "@reduxjs/toolkit": "^1.9.3",
     "clsx": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
